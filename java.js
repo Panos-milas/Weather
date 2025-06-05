@@ -10,7 +10,7 @@ var weatherIcon = document.querySelector('.weatherIcon');
 
 
 button.addEventListener('click', function () {
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=' + inputValue.value + '&appid=384808cef61082dd8777ffa108200ca9&units=metric')
+fetch('https://api.openweathermap.org/data/2.5/weather?q=' + inputValue.value + '&appid=' + API_KEY + '&units=metric')
         .then(response => response.json())
         .then(data => {
             var nameValue = data['name'];
